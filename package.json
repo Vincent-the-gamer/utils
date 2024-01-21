@@ -18,15 +18,18 @@
   },
   "sideEffects": false,
   "scripts": {
-    "dev": "esno",
-    "build": "tsup"
+    "build": "tsup",
+    "test": "vitest",
+    "dep": "taze"
   },
   "keywords": [
     "utils"
   ],
   "devDependencies": {
-    "esno": "^4.0.0",
+    "@types/node": "^20.11.5",
+    "taze": "^0.13.1",
     "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
   }
 }
