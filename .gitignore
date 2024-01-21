@@ -5,3 +5,6 @@ node_modules
 .idea
 **/*.mp3
 cache
+ncm
+mp3
+songcover

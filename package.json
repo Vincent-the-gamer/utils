@@ -23,6 +23,7 @@
   },
   "sideEffects": false,
   "scripts": {
+    "dev": "esno",
     "build": "tsup",
     "test": "vitest",
     "dep": "taze"
@@ -32,9 +33,13 @@
   ],
   "devDependencies": {
     "@types/node": "^20.11.5",
+    "esno": "^4.0.0",
     "taze": "^0.13.1",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.1"
+  },
+  "dependencies": {
+    "aes-js": "^3.1.2"
   }
 }
