@@ -1,0 +1,1 @@
+export const env = globalThis.window ? "browser" : "node"

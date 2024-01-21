@@ -1,0 +1,32 @@
+{
+  "name": "@vince-g/utils",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
+  "packageManager": "pnpm@8.14.1",
+  "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "funding": "https://afdian.net/a/vince-g",
+  "homepage": "https://github.com/Vincent-the-gamer/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent-the-gamer/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vincent-the-gamer/utils/issues"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "esno",
+    "build": "tsup"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "devDependencies": {
+    "esno": "^4.0.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
