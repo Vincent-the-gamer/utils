@@ -1,4 +1,4 @@
-# @vince-g/utils
+# @vincent-the-gamer/utils
 
 An opinionated JavaScript/TypeScript util collection by [@Vincent-the-gamer](https://github.com/Vincent-the-gamer).
 

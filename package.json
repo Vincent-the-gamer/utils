@@ -1,5 +1,5 @@
 {
-  "name": "@vince-g/utils",
+  "name": "@vincent-the-gamer/utils",
   "type": "module",
   "version": "0.1.0",
   "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
@@ -16,6 +16,10 @@
   },
   "bugs": {
     "url": "https://github.com/Vincent-the-gamer/utils/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
   },
   "sideEffects": false,
   "scripts": {
