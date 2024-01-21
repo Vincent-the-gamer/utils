@@ -12,7 +12,7 @@ const OfflineContext: any = (window.OfflineAudioContext || window.webkitOfflineA
  * @return {Number}             Detected BPM
  */
 
-export function detectBPM(buffer: AudioBuffer): Buffer[] | void {
+export function detectBPM(buffer: AudioBuffer): number | void {
   const source = getLowPassSource(buffer);
 
   /**
@@ -44,7 +44,7 @@ export function detectBPM(buffer: AudioBuffer): Buffer[] | void {
  * @return {Number}
  */
 
-function getTopCandidate(candidates: Record<string, any>) {
+function getTopCandidate(candidates: Record<string, any>): number {
   return candidates
     .sort((a: any, b: any) => (b.count - a.count))
     .splice(0, 5)[0].tempo;
@@ -90,7 +90,7 @@ function getLowPassSource(buffer: AudioBuffer) {
  * @return {Array}      Peaks found that are greater than the threshold
  */
 
-function findPeaks(data: number[]) {
+function findPeaks(data: number[]): number[] {
     let peaks: number[] = [];
     let threshold = 0.9;
     const minThresold = 0.3;
@@ -193,7 +193,7 @@ function identifyIntervals(peaks: number[]) {
  * @return {Function}
  */
 
-function groupByTempo(sampleRate: number) {
+function groupByTempo(sampleRate: number): Function {
 
   /**
    * Figure out best possible tempo candidates

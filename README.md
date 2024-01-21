@@ -1,6 +1,13 @@
-# @vincent-the-gamer/utils
+<p align="center">
+    <img src=".github/banner.png"/>
+</p>
 
-An opinionated JavaScript/TypeScript util collection by [@Vincent-the-gamer](https://github.com/Vincent-the-gamer).
+<h1 align="center">@vincent-the-gamer/utils</h1>
+
+<p align="center">
+    <span>An opinionated JavaScript/TypeScript util collection by</span>
+    <a href="https://github.com/Vincent-the-gamer" target="_blank">@Vincent-the-gamer</a>
+</p>
 
 # Notice
 This repo is under construction.

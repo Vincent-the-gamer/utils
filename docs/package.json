@@ -1,0 +1,20 @@
+{
+  "name": "utils-docs",
+  "version": "1.0.0",
+  "description": "Document of @vincent-the-gamer/utils",
+  "type": "module",
+  "scripts": {
+    "serve": "vitepress dev contents",
+    "build": "vitepress build contents",
+    "preview": "vitepress preview contents"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "sass": "^1.70.0",
+    "vite": "^4.5.2",
+    "vitepress": "1.0.0-rc.22"
+  }
+}
