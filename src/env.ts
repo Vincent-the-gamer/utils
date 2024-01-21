@@ -1,5 +1,8 @@
 import os from "os"
 
+/**
+ * Indicates current environment. ("browser" | "node")
+ */
 export const env = globalThis.window ? "browser" : "node"
 
 enum OSPlatform {
@@ -11,9 +14,9 @@ enum OSPlatform {
 
 /**
  * get current OS type.
- * @returns current OS type.
+ * @returns "windows" | "macOS" | "linux" | "mobile"
  */
-export function currentPlatform(): OSPlatform | void {
+export function getCurrentPlatform(): OSPlatform | void {
     if(env === "browser") {
         const agent: string = navigator.userAgent.toLowerCase();
     
