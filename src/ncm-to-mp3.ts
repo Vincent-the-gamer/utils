@@ -6,8 +6,8 @@
 import fs from "fs"
 import aes from "aes-js"
 import { fileURLToPath } from 'url'
-import path, { dirname } from 'path'
-const __dirname = dirname(fileURLToPath(import.meta.url))
+import path from 'path'
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // filter out non-ncm files in ncm folder.
 async function filterNcm(ncmDir: string){
@@ -88,6 +88,7 @@ export async function filterMp3 (directory: string) {
  * @param songCoverOutDir output directory of songcover images.
  */
 export async function ncm2mp3(ncmDir: string, mp3OutDir: string, songCoverOutDir: string){
+    await ensureDirectoryExists(ncmDir)
     await ensureDirectoryExists(mp3OutDir)
     await ensureDirectoryExists(songCoverOutDir)
     filterNcm(ncmDir).then(success => {
