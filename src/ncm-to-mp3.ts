@@ -5,8 +5,8 @@
 
 import fs from "fs"
 import aes from "aes-js"
-import { fileURLToPath } from 'node:url'
-import path, { dirname } from 'node:path'
+import { fileURLToPath } from 'url'
+import path, { dirname } from 'path'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // filter out non-ncm files in ncm folder.
@@ -57,7 +57,7 @@ async function ensureDirectoryExists (directory: string){
 /**
  * filter out all non-mp3 files.
  */
-async function filterMp3 (directory: string) {
+export async function filterMp3 (directory: string) {
     if (!fs.existsSync(directory)) {
        return Promise.reject("未找到路径！directory not found!")
     }
@@ -81,39 +81,15 @@ async function filterMp3 (directory: string) {
 }
 
 
-async function readFiles(mp3Dir: string, ncmDir: string, songCoverOutDir: string) {
-    // ensure directories exist
-    await ensureDirectoryExists(mp3Dir)
-    await ensureDirectoryExists(ncmDir)
-    await ensureDirectoryExists(songCoverOutDir)
-
-    return new Promise((resolve, reject) => {
-        fs.readdir(path.resolve(__dirname, mp3Dir), (err, files) => { 
-            if (err) 
-                reject(err); 
-            else { 
-                // only read specific files
-                resolve(files.filter(item => {
-                    return item.endsWith(".ncm") ||
-                           item.endsWith(".mp3") ||
-                           item.endsWith(".png") ||
-                           item.endsWith(".jpg") ||
-                           item.endsWith(".jpeg") 
-                }))
-
-            } 
-        }) 
-    })
-}
-
-
 /**
- * npm2mp3
+ * ncm2mp3
  * @param ncmDir directory of .ncm files.
  * @param mp3OutDir output directory of .mpe files.
  * @param songCoverOutDir output directory of songcover images.
  */
 export async function ncm2mp3(ncmDir: string, mp3OutDir: string, songCoverOutDir: string){
+    await ensureDirectoryExists(mp3OutDir)
+    await ensureDirectoryExists(songCoverOutDir)
     filterNcm(ncmDir).then(success => {
         fs.readdir(path.resolve(__dirname, ncmDir), function (err, files) {
             files.forEach(v => {
@@ -169,6 +145,7 @@ export async function ncm2mp3(ncmDir: string, mp3OutDir: string, songCoverOutDir
                     file.readUInt32LE(globalOffset);
                     globalOffset += 4;
                     globalOffset += 5;
+
                     // 读取图像长度
                     const imageLength = file.readUInt32LE(globalOffset);
                     globalOffset += 4;
@@ -176,6 +153,7 @@ export async function ncm2mp3(ncmDir: string, mp3OutDir: string, songCoverOutDir
                     const imageBuffer = Buffer.alloc(imageLength);
                     file.copy(imageBuffer, 0, globalOffset, globalOffset + imageLength);
                     globalOffset += imageLength;
+
                     // 写入图像文件
                     fs.writeFileSync(path.resolve(__dirname, songCoverOutDir) + "/" + v.replace(/.ncm/, '') + '.jpg', imageBuffer);
         

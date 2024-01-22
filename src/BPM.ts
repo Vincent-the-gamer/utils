@@ -4,7 +4,7 @@
 import { env } from "./env"
 
 // @ts-ignore
-const OfflineContext: any = (window.OfflineAudioContext || window.webkitOfflineAudioContext);
+const OfflineContext: any = (globalThis.window.OfflineAudioContext || globalThis.window.webkitOfflineAudioContext);
 
 /**
  * Detect BPM of a sound source,
