@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Utils",
   description: "An opinionated JS/TS util collection.",
-  base: "./",
   head: [
     // 添加图标
     ['link', { rel: 'icon', href: '/logo/logo.png' }],
