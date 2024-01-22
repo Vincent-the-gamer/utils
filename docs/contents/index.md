@@ -11,7 +11,7 @@ hero:
     alt: logo
   actions:
     - theme: brand
-      text: Have a look!!!
+      text: Get Started
       link: /utilList
 
 features:
@@ -19,5 +19,4 @@ features:
     details: Source code is written in pure TypeScript.
     icon: 
       src: "/imgs/typescript.png"
-    # link: "/instruction.html#与chatgpt对话"
 ---

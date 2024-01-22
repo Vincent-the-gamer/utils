@@ -1,10 +1,9 @@
 import { defineConfig } from 'vitepress'
-import config from "../../package.json"
 
 export default defineConfig({
   title: "Utils",
   description: "An opinionated JS/TS util collection.",
-  base: "/utils-doc/",
+  base: "./",
   head: [
     // 添加图标
     ['link', { rel: 'icon', href: '/logo/logo.png' }],
@@ -54,7 +53,7 @@ export default defineConfig({
     },
 
     footer: {
-      message: `Doc version: v${config.version} by Vincent-the-gamer | MIT Licensed`,
+      message: `Document by Vincent-the-gamer | MIT Licensed`,
       copyright: 'Copyright © 2024-PRESENT Vincent-the-gamer'
     },
 

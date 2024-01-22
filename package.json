@@ -27,7 +27,9 @@
     "build": "tsup",
     "test": "vitest",
     "dep": "taze",
-    "login-npm": "pnpm login --registry https://registry.npmjs.com"
+    "login-npm": "pnpm login --registry https://registry.npmjs.com",
+    "doc": "cd docs && pnpm run serve",
+    "build:doc": "cd docs && pnpm run build"
   },
   "keywords": [
     "utils"

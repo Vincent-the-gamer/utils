@@ -11,3 +11,11 @@
 
 # Notice
 This repo is under construction.
+
+# Installation
+<pre align='center'>
+npm i <b>@vincent-the-gamer/utils</b>
+</pre>
+
+# Documentation
+Visit docs at [https://utils.vince-g.xyz](https://utils.vince-g.xyz)
