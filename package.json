@@ -26,7 +26,8 @@
     "dev": "esno",
     "build": "tsup",
     "test": "vitest",
-    "dep": "taze"
+    "dep": "taze",
+    "login-npm": "pnpm login --registry https://registry.npmjs.com"
   },
   "keywords": [
     "utils"
