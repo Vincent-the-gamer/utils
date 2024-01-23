@@ -1,7 +1,7 @@
 // run `pnpm run dev test/ncm-to-mp3.test.ts`
 
 import { fileURLToPath } from "url"
-import { ncm2mp3 } from "../src/ncm-to-mp3"
+import { ncm2mp3 } from "../src/server/ncm-to-mp3"
 import path, { dirname } from 'path'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 

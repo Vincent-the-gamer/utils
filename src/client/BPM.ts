@@ -1,7 +1,7 @@
 /**
  * browser required!!
  */
-import { env } from "./env"
+import { env } from "../env"
 
 // @ts-ignore
 const OfflineContext: any = (globalThis.window.OfflineAudioContext || globalThis.window.webkitOfflineAudioContext);
