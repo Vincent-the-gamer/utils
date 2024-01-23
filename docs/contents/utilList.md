@@ -44,7 +44,8 @@ This function only works in browser.
 ```ts
 import { detectBPM } from "@vincent-the-gamer/utils"
 
-console.log(detectBPM()) // 120  (for example)
+const bpm = (detectBPM() as any) * 1
+console.log(bpm) // 120  (for example)
 ```
 
 ### ncm2mp3
