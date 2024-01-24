@@ -7,6 +7,6 @@ export default <Options>{
     "src/server/index.ts"
   ],
   clean: true,
-  format: ['esm'],
+  format: ['esm',"cjs"],
   dts: true
 }

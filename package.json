@@ -1,12 +1,45 @@
 {
   "name": "@vincent-the-gamer/utils",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
   "packageManager": "pnpm@8.14.3",
   "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "require": "./dist/client/index.cjs",
+      "import": "./dist/client/index.js"
+    },
+    "./server": {
+      "require": "./dist/server/index.cjs",
+      "import": "./dist/server/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ],
+      "client": [
+        "./dist/client/index.d.ts"
+      ],
+      "server": [
+        "./dist/server/index.d.ts"
+      ]
+    }
+  },
   "license": "MIT",
   "funding": "https://afdian.net/a/vince-g",
   "homepage": "https://github.com/Vincent-the-gamer/utils#readme",
