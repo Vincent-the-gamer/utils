@@ -8,5 +8,8 @@ export default <Options>{
   ],
   clean: true,
   format: ['esm',"cjs"],
-  dts: true
+  dts: true,
+  minify: true,
+  // compatible with __dirname in cjs and import.meta.url in mjs.
+  shims: true
 }
