@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /zh_hans/utilList
+      link: /zh_hans/utilList/environments
 
 features:
   - title: 100% TypeScript
