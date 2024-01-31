@@ -1,9 +1,9 @@
 {
   "name": "@vincent-the-gamer/utils",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@8.15.1",
   "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -68,12 +68,12 @@
     "utils"
   ],
   "devDependencies": {
-    "@types/node": "^20.11.5",
+    "@types/node": "^20.11.13",
     "esno": "^4.0.0",
-    "taze": "^0.13.1",
+    "taze": "^0.13.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.2.1"
+    "vitest": "^1.2.2"
   },
   "dependencies": {
     "aes-js": "^3.1.2"

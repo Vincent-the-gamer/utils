@@ -6,15 +6,18 @@
   "scripts": {
     "serve": "vitepress dev contents",
     "build": "vitepress build contents",
-    "preview": "vitepress preview contents"
+    "preview": "vitepress preview contents",
+    "dep": "taze"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.5",
+    "@shikijs/vitepress-twoslash": "1.0.0-beta.2",
+    "@types/node": "^20.11.13",
     "sass": "^1.70.0",
+    "taze": "^0.13.2",
     "vite": "^4.5.2",
-    "vitepress": "1.0.0-rc.22"
+    "vitepress": "1.0.0-rc.40"
   }
 }

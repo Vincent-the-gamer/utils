@@ -1,4 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client' 
+import '@shikijs/vitepress-twoslash/style.css' 
+import type { EnhanceAppContext } from 'vitepress'
 import './rainbow.scss'
 import "./vars.scss"
 
@@ -7,5 +10,8 @@ import Layout from "./Layout.vue"
 
 export default {
     ...DefaultTheme,
-    Layout
+    Layout,
+    enhanceApp({ app }: EnhanceAppContext) {
+        app.use(TwoslashFloatingVue)
+    },
 };
