@@ -18,7 +18,20 @@ function sayHaha(){
 
 useIf([
     [2 > 1, sayHaha], // handler will be called
-    // @ts-expect-error
     [2 === 1, sayHaha], // handler will not be called
+])
+```
+
+## useIfElse
+- description: `Create a if-else chain`
+
+```ts
+import { useIfElse } from "@vincent-the-gamer/utils"
+
+useIfElse([
+    [2 < 1, () => {console.log("aaa")}], // continue
+    [2 === 1, () => {console.log("bbb")}], // continue
+    [2 > 1, () => {console.log("ccc")}], // true, call the func
+    ["_", () => {console.log("not reached")}] // else
 ])
 ```

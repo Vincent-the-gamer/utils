@@ -15,7 +15,6 @@ lastUpdated: true
 import { env } from "@vincent-the-gamer/utils"
 
 console.log(env) // "node" | "browser"
-//      ^?
 ```
 
 ## getCurrentPlatform

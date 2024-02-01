@@ -1,0 +1,74 @@
+{
+  "name": "@vincent-the-gamer/utils",
+  "type": "module",
+  "version": "0.1.6",
+  "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
+  "packageManager": "pnpm@8.15.1",
+  "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "require": "./dist/client/index.cjs",
+      "import": "./dist/client/index.js"
+    },
+    "./server": {
+      "require": "./dist/server/index.cjs",
+      "import": "./dist/server/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ],
+      "client": [
+        "./dist/client/index.d.ts"
+      ],
+      "server": [
+        "./dist/server/index.d.ts"
+      ]
+    }
+  },
+  "license": "MIT",
+  "funding": "https://afdian.net/a/vince-g",
+  "homepage": "https://github.com/Vincent-the-gamer/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent-the-gamer/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vincent-the-gamer/utils/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "esno",
+    "build": "tsup"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.15",
+    "esno": "^4.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "tsup": "^8.0.1"
+  }
+}

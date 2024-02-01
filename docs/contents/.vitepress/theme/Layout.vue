@@ -25,7 +25,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       Math.max(y, innerHeight - y)
     )}px at ${x}px ${y}px)`
   ]
-  
+
   //@ts-ignore
   await document.startViewTransition(async () => {
     isDark.value = !isDark.value
@@ -47,7 +47,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <DefaultTheme.Layout />
 </template>
 
-<style lang="scss">
+<style>
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
@@ -66,8 +66,9 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 .VPSwitchAppearance {
   width: 22px !important;
-  & .check{
-    transform: none !important;
-  }
+}
+
+.VPSwitchAppearance .check {
+  transform: none !important;
 }
 </style>

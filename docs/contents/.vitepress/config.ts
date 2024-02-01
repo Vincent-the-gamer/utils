@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 import { docsConfig } from "./docs"
 import { enConfig } from "./configs/en"
 import { zhHansConfig } from './configs/zh_hans'
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash' 
 
 export default defineConfig({
   ...docsConfig,
@@ -47,10 +46,5 @@ export default defineConfig({
       link: "/zh_hans/",
       ...zhHansConfig
     }
-  },
-  markdown: {
-    codeTransformers: [
-      transformerTwoslash() 
-    ]
   }
 })
