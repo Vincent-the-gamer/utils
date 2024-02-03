@@ -9,7 +9,8 @@
     "test": "vitest",
     "doc": "pnpm -C docs run serve",
     "build:doc": "pnpm -C docs run build",
-    "build:core": "pnpm -C packages/core run build"
+    "build:core": "pnpm -C packages/core run build",
+    "publish:core": "pnpm -C packages/core publish"
   },
   "keywords": [],
   "author": "",
