@@ -23,7 +23,7 @@ export function useIf(rules: IfRule[]) {
 /**
  * Create a if-else chain
  * @param rules 
- * @returns result of true statement.
+ * @returns result of true statement or fallback result if no true statement.
  */
 export function useIfElse(rules: IfElseRule[]) {
     for (const [condition, handler] of rules) {

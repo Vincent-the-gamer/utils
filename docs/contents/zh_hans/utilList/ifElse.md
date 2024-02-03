@@ -4,34 +4,37 @@ title: "If-Else小工具"
 lastUpdated: true
 ---
 
-# If-Else 小工具
+# If-Else小工具
 
 ## useIf
-- 描述: `把多个if组合在一起`
+- 描述: `合并多个if`
+- 返回值: `一个数组，结果索引与参数的规则条目一一对应, true的条目返回内部函数执行结果，false的条目返回null`
 
 ```ts
 import { useIf } from "@vincent-the-gamer/utils"
 
-function sayHaha(){
-    console.log("haha")
-}
-
-useIf([
-    [2 > 1, sayHaha], // 会调用函数
-    [2 === 1, sayHaha], // 不会调用函数
+const result = useIf([
+    [2 > 1, () => "yeah, 2 > 1"], // 函数会被调用，结果为函数的返回值
+    [2 === 1, () => "yeah, 2 === 1"], // 函数不会被调用，结果直接给null
 ])
+
+// result 值为 ["yeah, 2 > 1", null]
 ```
 
 ## useIfElse
-- 描述: `创建一个 if-else 链`
+- 描述: `创建一个if-else链`
+- 返回值: `返回true的条目的函数返回值，如果没有一个是true, 则取fallback的函数返回值`
 
 ```ts
 import { useIfElse } from "@vincent-the-gamer/utils"
 
-useIfElse([
-    [2 < 1, () => {console.log("aaa")}], // 继续判断
-    [2 === 1, () => {console.log("bbb")}], // 继续判断
-    [2 > 1, () => {console.log("ccc")}], // 满足条件，调用函数，并且结束流程
-    ["_", () => {console.log("not reached")}] // else
+const result = useIfElse([
+    [2 < 1, () => "aaa"], // continue
+    // @ts-expect-error
+    [2 === 1, () => "bbb"], // continue
+    [2 > 1, () => "ccc"], // true, call the func
+    ["_", () => "not reached"] // else (fallback)
 ])
+
+// result 值为 "ccc"
 ```

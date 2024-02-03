@@ -8,30 +8,33 @@ lastUpdated: true
 
 ## useIf
 - description: `combine multiple ifs`
+- returns: `an array, the results of rules are in the same of their original index. true statements get the return value of their inner function, while the falses gets null.`
 
 ```ts
 import { useIf } from "@vincent-the-gamer/utils"
 
-function sayHaha(){
-    console.log("haha")
-}
-
-useIf([
-    [2 > 1, sayHaha], // handler will be called
-    [2 === 1, sayHaha], // handler will not be called
+const result = useIf([
+    [2 > 1, () => "yeah, 2 > 1"], // handler will be called
+    [2 === 1, () => "yeah, 2 === 1"], // handler will not be called
 ])
+
+// result is ["yeah, 2 > 1", null]
 ```
 
 ## useIfElse
 - description: `Create a if-else chain`
+- returns: `result of true statement or fallback result if no true statement.`
 
 ```ts
 import { useIfElse } from "@vincent-the-gamer/utils"
 
-useIfElse([
-    [2 < 1, () => {console.log("aaa")}], // continue
-    [2 === 1, () => {console.log("bbb")}], // continue
-    [2 > 1, () => {console.log("ccc")}], // true, call the func
-    ["_", () => {console.log("not reached")}] // else
+const result = useIfElse([
+    [2 < 1, () => "aaa"], // continue
+    // @ts-expect-error
+    [2 === 1, () => "bbb"], // continue
+    [2 > 1, () => "ccc"], // true, call the func
+    ["_", () => "not reached"] // else（fallback)
 ])
+
+// result is: "ccc"
 ```
