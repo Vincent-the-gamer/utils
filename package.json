@@ -10,7 +10,7 @@
     "doc": "pnpm -C docs run serve",
     "build:doc": "pnpm -C docs run build",
     "build:core": "pnpm -C packages/core run build",
-    "publish:core": "pnpm -C packages/core publish"
+    "publish:core": "cd packages/core && pnpm publish"
   },
   "keywords": [],
   "author": "",
