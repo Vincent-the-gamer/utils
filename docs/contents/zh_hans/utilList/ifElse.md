@@ -29,11 +29,11 @@ const result = useIf([
 import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([
-    [2 < 1, () => "aaa"], // continue
+    [2 < 1, () => "aaa"], // 不满足条件，继续
     // @ts-expect-error
-    [2 === 1, () => "bbb"], // continue
-    [2 > 1, () => "ccc"], // true, call the func
-    [_, () => "not reached"] // else (fallback)
+    [2 === 1, () => "bbb"], // 不满足条件，继续
+    [2 > 1, () => "ccc"], // 满足条件，调用函数
+    [_, () => "not reached"] // 没有匹配任何条件，调用兜底的函数
 ])
 
 // result 值为 "ccc"
