@@ -1,6 +1,8 @@
+export const _: never = Symbol() as never
+
 type Handler = (...args: any) => any
 type IfRule = [boolean, Handler]
-type IfElseRule = [boolean | "_", Handler]
+type IfElseRule = [boolean | unknown, Handler]
 
 /**
  * Combine Multiple ifs
@@ -27,7 +29,7 @@ export function useIf(rules: IfRule[]) {
  */
 export function useIfElse(rules: IfElseRule[]) {
     for (const [condition, handler] of rules) {
-        const willCall: boolean = (typeof condition === "boolean" && condition) || condition === "_"
+        const willCall: boolean = (typeof condition === "boolean" && condition) || condition === _
         if(willCall){
             return handler(condition)
         } else {

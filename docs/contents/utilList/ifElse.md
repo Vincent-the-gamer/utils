@@ -26,14 +26,14 @@ const result = useIf([
 - returns: `result of true statement or fallback result if no true statement.`
 
 ```ts
-import { useIfElse } from "@vincent-the-gamer/utils"
+import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([
     [2 < 1, () => "aaa"], // continue
     // @ts-expect-error
     [2 === 1, () => "bbb"], // continue
     [2 > 1, () => "ccc"], // true, call the func
-    ["_", () => "not reached"] // else（fallback)
+    [_, () => "not reached"] // else（fallback)
 ])
 
 // result is: "ccc"

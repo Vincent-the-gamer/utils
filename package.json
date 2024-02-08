@@ -8,6 +8,7 @@
     "dep": "taze -r",
     "test": "vitest",
     "doc": "pnpm -C docs run serve",
+    "dev": "pnpm -C packages/core run dev",
     "build:doc": "pnpm -C docs run build",
     "build:core": "pnpm -C packages/core run build",
     "publish:core": "cd packages/core && pnpm publish"
@@ -16,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "taze": "^0.13.2",
+    "taze": "^0.13.3",
     "vitest": "^1.2.2"
   }
 }

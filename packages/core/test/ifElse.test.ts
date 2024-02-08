@@ -1,5 +1,5 @@
 import { expect, test } from "vitest"
-import { useIf, useIfElse } from "../src/ifElse"
+import { useIf, useIfElse, _ } from "../src/ifElse"
 
 
 test("useIf", () => {
@@ -20,9 +20,18 @@ test("useIfElse",() => {
         // @ts-expect-error
         [2 === 1, () => "bbb"], // continue
         [2 > 1, () => "ccc"], // true, call the func
-        ["_", () => "not reached"] // else
+        [_, () => "not reached"] // else
     ])
     expect(result).toBe("ccc")
 })
 
+test("useIfElse fallback", () => {
+    const result = useIfElse([
+        [2 < 1, () => "aaa"], // continue
+        // @ts-expect-error
+        [2 === 1, () => "bbb"], // continue
+        [_, () => "not reached"] // call fallback func
+    ])
+    expect(result).toBe("not reached")
+})
 

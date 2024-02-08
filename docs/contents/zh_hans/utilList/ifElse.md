@@ -26,14 +26,14 @@ const result = useIf([
 - 返回值: `返回true的条目的函数返回值，如果没有一个是true, 则取fallback的函数返回值`
 
 ```ts
-import { useIfElse } from "@vincent-the-gamer/utils"
+import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([
     [2 < 1, () => "aaa"], // continue
     // @ts-expect-error
     [2 === 1, () => "bbb"], // continue
     [2 > 1, () => "ccc"], // true, call the func
-    ["_", () => "not reached"] // else (fallback)
+    [_, () => "not reached"] // else (fallback)
 ])
 
 // result 值为 "ccc"
