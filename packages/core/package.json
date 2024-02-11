@@ -63,12 +63,12 @@
     "utils"
   ],
   "devDependencies": {
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.11.17",
     "esno": "^4.0.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "aes-js": "^3.1.2",
-    "tsup": "^8.0.1"
+    "tsup": "^8.0.2"
   }
 }

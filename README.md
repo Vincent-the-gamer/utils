@@ -10,9 +10,6 @@
 </p>
 
 <p align="center">
-    <!-- <a href="https://codecov.io/gh/@vincent-the-gamer/utils" target="_blank">
-        <img src="https://img.shields.io/codecov/c/github/vincent-the-gamer/@vincent-the-gamer/utils？style=flat-square" alt="Codecov"/>
-    </a> -->
     <a href="https://www.npmjs.com/package/@vincent-the-gamer/utils" target="_blank">
         <img src="https://img.shields.io/npm/dm/@vincent-the-gamer/utils?style=flat-square" alt="downloads"/>
     </a>
@@ -23,10 +20,6 @@
         <img src="https://img.shields.io/github/license/Vincent-the-gamer/utils?style=flat-square" alt="GitHub"/>
     </a>
 </p>
-
-
-# Notice
-This repo is under construction.
 
 # Installation
 <pre align='center'>
