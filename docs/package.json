@@ -13,7 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.17",
-    "vite": "^4.5.2",
-    "vitepress": "1.0.0-rc.40"
+    "vite": "^5.1.1",
+    "vitepress": "1.0.0-rc.42"
+  },
+  "dependencies": {
+    "@shikijs/vitepress-twoslash": "^1.1.1"
   }
 }

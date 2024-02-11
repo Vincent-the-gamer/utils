@@ -10,12 +10,13 @@ lastUpdated: true
 - description: `convert kebab-case or snake_case to camelCase.`
 - returns: `camelized string.`
 
-```ts
+```ts twoslash
 import { toCamel } from "@vincent-the-gamer/utils"
 
 let str = "pal-world"
 let str2 = "pal_world"
 toCamel(str) // palWorld
+//  ^?
 toCamel(str2) // palWorld
 ```
 
