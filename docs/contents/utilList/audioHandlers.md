@@ -15,7 +15,8 @@ This function only works in browser.
 - description: `Detect audio BPM(beats per minute).`
 - returns: `number of BPM`
 
-```ts
+```ts twoslash
+// @noErrors
 import { detectBPM } from "@vincent-the-gamer/utils/client"
 
 const audioBuffer: AudioBuffer  // please convert you audio into AudioBuffer

@@ -15,7 +15,8 @@ lastUpdated: true
 - 描述: `检测音频BPM(beats per minute, 每分钟节拍数).`
 - 返回值: `BPM数值`
 
-```ts
+```ts twoslash
+// @noErrors
 import { detectBPM } from "@vincent-the-gamer/utils/client"
 
 const audioBuffer: AudioBuffer  // 请将您的音频转为AudioBuffer

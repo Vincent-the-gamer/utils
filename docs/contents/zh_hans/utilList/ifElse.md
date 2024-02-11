@@ -11,6 +11,7 @@ lastUpdated: true
 - 返回值: `一个数组，结果索引与参数的规则条目一一对应, true的条目返回内部函数执行结果，false的条目返回null`
 
 ```ts twoslash
+// @noErrors
 import { useIf } from "@vincent-the-gamer/utils"
 
 const result = useIf([
@@ -26,6 +27,7 @@ const result = useIf([
 - 返回值: `返回true的条目的函数返回值，如果没有一个是true, 则取fallback的函数返回值`
 
 ```ts twoslash
+// @noErrors
 import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([

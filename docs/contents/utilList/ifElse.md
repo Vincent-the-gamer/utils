@@ -11,6 +11,7 @@ lastUpdated: true
 - returns: `an array, the results of rules are in the same of their original index. true statements get the return value of their inner function, while the falses gets null.`
 
 ```ts twoslash
+// @noErrors
 import { useIf } from "@vincent-the-gamer/utils"
 
 const result = useIf([

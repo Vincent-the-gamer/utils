@@ -11,7 +11,8 @@
     "dev": "pnpm -C packages/core run dev",
     "build:doc": "pnpm -C docs run build",
     "build:core": "pnpm -C packages/core run build",
-    "publish:core": "cd packages/core && pnpm publish"
+    "publish:core": "cd packages/core && pnpm publish",
+    "publish": "pnpm run build:core && pnpm run publish:core"
   },
   "keywords": [],
   "author": "",
