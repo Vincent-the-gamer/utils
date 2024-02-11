@@ -1,7 +1,7 @@
 {
   "name": "@vincent-the-gamer/utils",
   "type": "module",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
   "packageManager": "pnpm@8.15.1",
   "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
