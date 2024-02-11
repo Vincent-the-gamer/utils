@@ -10,7 +10,7 @@ lastUpdated: true
 - description: `combine multiple ifs`
 - returns: `an array, the results of rules are in the same of their original index. true statements get the return value of their inner function, while the falses gets null.`
 
-```ts
+```ts twoslash
 import { useIf } from "@vincent-the-gamer/utils"
 
 const result = useIf([
@@ -25,7 +25,7 @@ const result = useIf([
 - description: `Create a if-else chain`
 - returns: `result of true statement or fallback result if no true statement.`
 
-```ts
+```ts twoslash
 import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([

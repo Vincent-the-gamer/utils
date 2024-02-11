@@ -12,6 +12,7 @@ export default {
     ...DefaultTheme,
     Layout,
     enhanceApp({ app }: EnhanceAppContext) {
+        //@ts-ignore
         app.use(TwoslashFloatingVue) 
     },
 };

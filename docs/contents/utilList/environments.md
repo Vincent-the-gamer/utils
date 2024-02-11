@@ -11,7 +11,7 @@ lastUpdated: true
     - `node`: You are in **Node.js** environment.
     - `browser`: You are in **browser** environment.
 
-```ts
+```ts twoslash
 import { env } from "@vincent-the-gamer/utils"
 
 console.log(env) // "node" | "browser"
@@ -21,7 +21,7 @@ console.log(env) // "node" | "browser"
 - description: `get user's current os type.`
 - returns: "windows" | "macOS" | "linux" | "mobile"
 
-```ts
+```ts twoslash
 import { getCurrentPlatform } from "@vincent-the-gamer/utils"
 
 console.log(getCurrentPlatform()) // "windows" | "macOS" | "linux" | "mobile"

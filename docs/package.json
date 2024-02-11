@@ -13,10 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "@vincent-the-gamer/utils": "workspace:^",
     "vite": "^5.1.1",
-    "vitepress": "1.0.0-rc.42"
-  },
-  "dependencies": {
+    "vitepress": "1.0.0-rc.42",
     "@shikijs/vitepress-twoslash": "^1.1.1"
   }
 }

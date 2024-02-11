@@ -12,7 +12,7 @@ lastUpdated: true
     - `node`: 你在 **Node.js** 环境中.
     - `browser`: 你在 **浏览器** 环境中.
 
-```ts
+```ts twoslash
 import { env } from "@vincent-the-gamer/utils"
 
 console.log(env) // "node" | "browser"
@@ -22,7 +22,7 @@ console.log(env) // "node" | "browser"
 - 描述: `获取当前用户操作系统类型`
 - 返回值: "windows" | "macOS" | "linux" | "mobile"
 
-```ts
+```ts twoslash
 import { getCurrentPlatform } from "@vincent-the-gamer/utils"
 
 console.log(getCurrentPlatform()) // "windows" | "macOS" | "linux" | "mobile"

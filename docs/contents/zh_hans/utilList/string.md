@@ -10,7 +10,7 @@ lastUpdated: true
 - 描述: `转换kebab-case，snake_case为小驼峰(camelCase)的字符串。`
 - 返回: `小驼峰形式的字符串`
 
-```ts
+```ts twoslash
 import { toCamel } from "@vincent-the-gamer/utils"
 
 let str = "pal-world"
@@ -23,7 +23,7 @@ toCamel(str2) // palWorld
 - 描述: `转换kebab-case，snake_case为大驼峰(PascalCase)的字符串。`
 - 返回: `大驼峰形式的字符串`
 
-```ts
+```ts twoslash
 import { toPascal } from "@vincent-the-gamer/utils"
 
 let str = "pal-world"
@@ -39,7 +39,7 @@ toPascal(str2) // PalWorld
 会将大写字母转为小写。
 :::
 
-```ts
+```ts twoslash
 import { kebabToSnake } from "@vincent-the-gamer/utils"
 
 let str = "Git-Hub"
@@ -53,7 +53,7 @@ kebabToSnake(str) // git_hub
 会将大写字母转为小写。
 :::
 
-```ts
+```ts twoslash
 import { snakeToKebab } from "@vincent-the-gamer/utils"
 
 let str = "bili_bili"
@@ -62,7 +62,7 @@ snakeToKebab(str) // bili-bili
 
 ## 首字母
 ### 大写/小写
-```ts
+```ts twoslash
 import { capitalizeFirst, uncapitalizeFirst } from "@vincent-the-gamer/utils"
 
 capitalizeFirst("palworld")  // Palworld

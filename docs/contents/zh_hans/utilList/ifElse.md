@@ -10,7 +10,7 @@ lastUpdated: true
 - 描述: `合并多个if`
 - 返回值: `一个数组，结果索引与参数的规则条目一一对应, true的条目返回内部函数执行结果，false的条目返回null`
 
-```ts
+```ts twoslash
 import { useIf } from "@vincent-the-gamer/utils"
 
 const result = useIf([
@@ -25,7 +25,7 @@ const result = useIf([
 - 描述: `创建一个if-else链`
 - 返回值: `返回true的条目的函数返回值，如果没有一个是true, 则取fallback的函数返回值`
 
-```ts
+```ts twoslash
 import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([

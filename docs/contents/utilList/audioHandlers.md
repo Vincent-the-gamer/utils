@@ -12,13 +12,14 @@ lastUpdated: true
 This function only works in browser.
 :::
 
-- description: `Detect mp3 audio BPM(beats per minute).`
+- description: `Detect audio BPM(beats per minute).`
 - returns: `number of BPM`
 
 ```ts
 import { detectBPM } from "@vincent-the-gamer/utils/client"
 
-const bpm = (detectBPM() as any) * 1
+const audioBuffer: AudioBuffer  // please convert you audio into AudioBuffer
+const bpm = (detectBPM(audioBuffer) as any) * 1
 console.log(bpm) // 120  (for example)
 ```
 
@@ -38,7 +39,7 @@ This function only works in Node.js.
     - `song covers`
 
 
-```ts
+```ts twoslash
 import { ncm2mp3 } from "@vincent-the-gamer/utils/server"
 
 // just look if mp3 files have been generated.

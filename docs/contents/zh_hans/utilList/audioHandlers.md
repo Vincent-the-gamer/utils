@@ -18,7 +18,8 @@ lastUpdated: true
 ```ts
 import { detectBPM } from "@vincent-the-gamer/utils/client"
 
-const bpm = (detectBPM() as any) * 1
+const audioBuffer: AudioBuffer  // 请将您的音频转为AudioBuffer
+const bpm = (detectBPM(audioBuffer) as any) * 1
 console.log(bpm) // 120  (举例)
 ```
 
@@ -38,7 +39,7 @@ console.log(bpm) // 120  (举例)
     - `歌曲封面图片`
 
 
-```ts
+```ts twoslash
 import { ncm2mp3 } from "@vincent-the-gamer/utils/server"
 
 // just look if mp3 files have been generated.
