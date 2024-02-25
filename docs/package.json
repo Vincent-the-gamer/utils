@@ -12,10 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.17",
+    "@shikijs/vitepress-twoslash": "^1.1.7",
+    "@types/node": "^20.11.20",
     "@vincent-the-gamer/utils": "workspace:^",
-    "vite": "^5.1.1",
-    "vitepress": "1.0.0-rc.42",
-    "@shikijs/vitepress-twoslash": "^1.1.1"
+    "vite": "^5.1.4",
+    "vitepress": "1.0.0-rc.42"
   }
 }
