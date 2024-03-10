@@ -63,9 +63,9 @@
     "utils"
   ],
   "devDependencies": {
-    "@types/node": "^20.11.20",
-    "esno": "^4.0.0",
-    "typescript": "^5.3.3"
+    "@types/node": "^20.11.25",
+    "esno": "^4.7.0",
+    "typescript": "^5.4.2"
   },
   "dependencies": {
     "aes-js": "^3.1.2",
