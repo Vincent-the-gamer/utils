@@ -2,7 +2,7 @@
   "type": "module",
   "version": "0.1.8",
   "private": true,
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.0.1",
   "scripts": {
     "login-npm": "pnpm login --registry https://registry.npmjs.com",
     "dep": "taze",
@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "taze": "^0.13.3",
-    "vitest": "^1.4.0"
+    "taze": "^0.13.6",
+    "vitest": "^1.5.0"
   }
 }
