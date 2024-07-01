@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.8",
   "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
-  "packageManager": "pnpm@9.0.1",
+  "packageManager": "pnpm@9.4.0",
   "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -63,12 +63,12 @@
     "utils"
   ],
   "devDependencies": {
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.14.9",
     "esno": "^4.7.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   },
   "dependencies": {
     "aes-js": "^3.1.2",
-    "tsup": "^8.0.2"
+    "tsup": "^8.1.0"
   }
 }
