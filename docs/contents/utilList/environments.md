@@ -12,6 +12,7 @@ lastUpdated: true
     - `browser`: You are in **browser** environment.
 
 ```ts twoslash
+// @noErrors
 import { env } from "@vincent-the-gamer/utils"
 
 console.log(env) // "node" | "browser"
@@ -22,6 +23,7 @@ console.log(env) // "node" | "browser"
 - returns: "windows" | "macOS" | "linux" | "mobile"
 
 ```ts twoslash
+// @noErrors
 import { getCurrentPlatform } from "@vincent-the-gamer/utils"
 
 console.log(getCurrentPlatform()) // "windows" | "macOS" | "linux" | "mobile"

@@ -27,6 +27,7 @@ const result = useIf([
 - returns: `result of true statement or fallback result if no true statement.`
 
 ```ts twoslash
+// @noErrors
 import { useIfElse, _ } from "@vincent-the-gamer/utils"
 
 const result = useIfElse([

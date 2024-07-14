@@ -1,10 +1,10 @@
 {
   "type": "module",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "scripts": {
     "login-npm": "pnpm login --registry https://registry.npmjs.com",
-    "dep": "taze",
+    "dep": "taze major -r",
     "test": "vitest",
     "doc": "pnpm -C docs run serve",
     "dev": "pnpm -C packages/core run dev",
@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "taze": "^0.14.0",
-    "vitest": "^1.6.0"
+    "taze": "^0.15.0",
+    "vitest": "^2.0.2"
   }
 }

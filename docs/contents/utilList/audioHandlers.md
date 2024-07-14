@@ -41,6 +41,7 @@ This function only works in Node.js.
 
 
 ```ts twoslash
+// @noErrors
 import { ncm2mp3 } from "@vincent-the-gamer/utils/server"
 
 // just look if mp3 files have been generated.

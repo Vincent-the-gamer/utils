@@ -4,7 +4,7 @@ title: "主页"
 
 hero:
   name: "Utils"
-  text: "固执己见的 JS/TS 工具集合."
+  text: "有个性的 JS/TS 工具集合"
   tagline: "@vincent-the-gamer/utils"
   image: 
     src: "/logo/logo.png"

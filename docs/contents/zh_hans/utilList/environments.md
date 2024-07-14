@@ -13,6 +13,7 @@ lastUpdated: true
     - `browser`: 你在 **浏览器** 环境中.
 
 ```ts twoslash
+// @noErrors
 import { env } from "@vincent-the-gamer/utils"
 
 console.log(env) // "node" | "browser"
@@ -23,6 +24,7 @@ console.log(env) // "node" | "browser"
 - 返回值: "windows" | "macOS" | "linux" | "mobile"
 
 ```ts twoslash
+// @noErrors
 import { getCurrentPlatform } from "@vincent-the-gamer/utils"
 
 console.log(getCurrentPlatform()) // "windows" | "macOS" | "linux" | "mobile"
