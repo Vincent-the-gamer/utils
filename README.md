@@ -22,12 +22,15 @@
 </p>
 
 # Installation
+
 <pre align='center'>
 npm i <b>@vincent-the-gamer/utils</b>
 </pre>
 
 # Documentation
+
 Visit docs at [https://utils.vince-g.xyz](https://utils.vince-g.xyz)
 
 # License
+
 [MIT License @Vincent-the-gamer 2024-PRESENT](./LICENSE)

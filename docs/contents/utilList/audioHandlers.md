@@ -32,12 +32,12 @@ This function only works in Node.js.
 
 - description: `Transform .ncm audios into .mp3 audios.`
 - inputs:
-    - `ncm directory`
-    - `mp3 output directory`
-    - `songcover output directory`
+  - `ncm directory`
+  - `mp3 output directory`
+  - `songcover output directory`
 - outputs:
-    - `mp3 files`
-    - `song covers`
+  - `mp3 files`
+  - `song covers`
 
 ```ts twoslash
 // @noErrors
@@ -52,4 +52,5 @@ await ncm2mp3(
 ```
 
 ## Example
+
 My GitHub Repo: [Nemassler](https://github.com/Vincent-the-gamer/Nemassler)

@@ -32,12 +32,12 @@ console.log(bpm) // 120  (举例)
 
 - 描述: `把.ncm音频转为.mp3音频`
 - 输入:
-    - `ncm路径`
-    - `mp3输出路径`
-    - `songcover(歌曲封面图片)输出路径`
+  - `ncm路径`
+  - `mp3输出路径`
+  - `songcover(歌曲封面图片)输出路径`
 - 输出:
-    - `mp3 文件`
-    - `歌曲封面图片`
+  - `mp3 文件`
+  - `歌曲封面图片`
 
 ```ts twoslash
 // @noErrors
@@ -52,4 +52,5 @@ await ncm2mp3(
 ```
 
 ## 使用例
+
 我的GitHub Repo: [Nemassler](https://github.com/Vincent-the-gamer/Nemassler)

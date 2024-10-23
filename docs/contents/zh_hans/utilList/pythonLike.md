@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: "Python-like"
+title: "类Python函数"
 lastUpdated: true
 ---
 
-# Python-like functions
+# 类Python函数
 
 ## range()
 
-Similar usage as Python range()
+用法类似于 Python range()
 
 ```ts twoslash
 // @noErrors
@@ -21,7 +21,7 @@ range(0, -2, -1) // [0, -1]
 
 ## all()
 
-Similar usage as Python all()
+用法类似于 Python all()
 
 ```ts twoslash
 // @noErrors
@@ -43,7 +43,7 @@ all(conditionList2) // false
 
 ## any()
 
-Similar usage as Python any()
+用法类似于 Python any()
 
 ```ts twoslash
 // @noErrors
@@ -65,7 +65,7 @@ any(conditionList2) // true
 
 ## divmod()
 
-Similar usage as Python divmod()
+用法类似于 Python divmod()
 
 ```ts twoslash
 // @noErrors

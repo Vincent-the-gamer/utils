@@ -7,6 +7,7 @@ lastUpdated: true
 # String Utils
 
 ## toCamel
+
 - description: `convert kebab-case or snake_case to camelCase.`
 - returns: `camelized string.`
 
@@ -21,6 +22,7 @@ toCamel(str2) // palWorld
 ```
 
 ## toPascal
+
 - description: `convert kebab-case or snake_case to PascalCase.`
 - returns: `pascalized string.`
 
@@ -35,6 +37,7 @@ toPascal(str2) // PalWorld
 ```
 
 ## kebab-case -> snake_case
+
 Just look at the code.
 
 ::: tip Notice
@@ -50,6 +53,7 @@ kebabToSnake(str) // git_hub
 ```
 
 ## snake_case -> kebab-case
+
 Just look at the code.
 
 ::: tip Notice
@@ -65,7 +69,9 @@ snakeToKebab(str) // bili-bili
 ```
 
 ## First Letter
+
 ### Capitalize/Uncapitalize
+
 ```ts twoslash
 // @noErrors
 import { capitalizeFirst, uncapitalizeFirst } from '@vincent-the-gamer/utils'
@@ -75,6 +81,7 @@ uncapitalizeFirst('Palworld') // palworld
 ```
 
 ## Bilibili BV <-> AV
+
 AVxxxx or BVxxxx is the number of Bilibili videos.
 These functions give you a transformer between BV and AV.
 

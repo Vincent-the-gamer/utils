@@ -7,6 +7,7 @@ lastUpdated: true
 # If-Else tools
 
 ## useIf
+
 - description: `combine multiple ifs`
 - returns: `an array, the results of rules are in the same of their original index. true statements get the return value of their inner function, while the falses gets null.`
 
@@ -23,6 +24,7 @@ const result = useIf([
 ```
 
 ## useIfElse
+
 - description: `Create a if-else chain`
 - returns: `result of true statement or fallback result if no true statement.`
 

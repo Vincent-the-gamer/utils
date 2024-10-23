@@ -3,13 +3,15 @@ layout: doc
 title: "Environments"
 lastUpdated: true
 ---
+
 # Environments
 
 ## env
+
 - description: `get current runtime`
 - returns:
-    - `node`: You are in **Node.js** environment.
-    - `browser`: You are in **browser** environment.
+  - `node`: You are in **Node.js** environment.
+  - `browser`: You are in **browser** environment.
 
 ```ts twoslash
 // @noErrors
@@ -19,6 +21,7 @@ console.log(env) // "node" | "browser"
 ```
 
 ## getCurrentPlatform
+
 - description: `get user's current os type.`
 - returns: "windows" | "macOS" | "linux" | "mobile"
 

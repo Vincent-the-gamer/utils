@@ -7,6 +7,7 @@ lastUpdated: true
 # 字符串工具
 
 ## toCamel
+
 - 描述: `转换kebab-case，snake_case为小驼峰(camelCase)的字符串。`
 - 返回: `小驼峰形式的字符串`
 
@@ -21,6 +22,7 @@ toCamel(str2) // palWorld
 ```
 
 ## toPascal
+
 - 描述: `转换kebab-case，snake_case为大驼峰(PascalCase)的字符串。`
 - 返回: `大驼峰形式的字符串`
 
@@ -35,6 +37,7 @@ toPascal(str2) // PalWorld
 ```
 
 ## kebab-case转为snake_case
+
 看代码就行
 
 ::: tip 注意
@@ -50,6 +53,7 @@ kebabToSnake(str) // git_hub
 ```
 
 ## snake_case 转为 kebab-case
+
 看代码就行
 
 ::: tip 注意
@@ -65,7 +69,9 @@ snakeToKebab(str) // bili-bili
 ```
 
 ## 首字母
+
 ### 大写/小写
+
 ```ts twoslash
 // @noErrors
 import { capitalizeFirst, uncapitalizeFirst } from '@vincent-the-gamer/utils'
@@ -75,6 +81,7 @@ uncapitalizeFirst('Palworld') // palworld
 ```
 
 ## Bilibili BV和AV互转
+
 AVxxxx 以及 BVxxxx 是B站视频编号的两种编码形式。
 这里提供两个函数来互相转换这两者。
 
