@@ -1,22 +1,26 @@
 {
   "type": "module",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "private": true,
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "scripts": {
     "login-npm": "pnpm login --registry https://registry.npmjs.com",
     "dep": "taze major -r",
     "test": "vitest",
     "doc": "pnpm -C docs run serve",
     "dev": "pnpm -C packages/core run dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "build:doc": "pnpm -C docs run build",
     "build:core": "pnpm -C packages/core run build",
     "publish:core": "cd packages/core && pnpm publish --registry https://registry.npmjs.com"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "taze": "^0.15.0",
-    "vitest": "^2.0.2"
+    "@antfu/eslint-config": "^3.8.0",
+    "eslint": "^9.13.0",
+    "taze": "^0.17.2",
+    "vitest": "^2.1.3"
   }
 }

@@ -1,53 +1,54 @@
 /**
  * browser required!!
  */
-import { env } from "../env"
+import { env } from '../env'
 
 // @ts-ignore
-const OfflineContext: any = (globalThis.window.OfflineAudioContext || globalThis.window.webkitOfflineAudioContext);
+const OfflineContext: any = (globalThis.window.OfflineAudioContext || globalThis.window.webkitOfflineAudioContext)
 
 /**
  * Detect BPM of a sound source,
  * @param  {AudioBuffer} buffer Sound to process
- * @return {Number}             Detected BPM
+ * @return {number}             Detected BPM
  */
 
 export function detectBPM(buffer: AudioBuffer): number | void {
-  const source = getLowPassSource(buffer);
+  const source = getLowPassSource(buffer)
 
   /**
    * Schedule the sound to start playing at time:0
    */
 
-  source.start(0);
+  source.start(0)
 
   /**
    * Pipe the source through the program
    */
 
-  if(env === "browser") {
+  if (env === 'browser') {
     return [
       findPeaks,
       identifyIntervals,
       groupByTempo(buffer.sampleRate),
-      getTopCandidate
+      getTopCandidate,
     ].reduce(
-     (state, fn) => fn(state),
-      source.buffer.getChannelData(0)
-    );
+      (state, fn) => fn(state),
+      source.buffer.getChannelData(0),
+    )
   }
 }
 
 /**
  * Sort results by count and return top candidate
- * @param  {Object} Candidate
- * @return {Number}
+ * @param  {object} Candidate
+ * @return {number}
  */
 
 function getTopCandidate(candidates: Record<string, any>): number {
   return candidates
     .sort((a: any, b: any) => (b.count - a.count))
-    .splice(0, 5)[0].tempo;
+    .splice(0, 5)[0]
+    .tempo
 }
 
 /**
@@ -57,31 +58,31 @@ function getTopCandidate(candidates: Record<string, any>): number {
  */
 
 function getLowPassSource(buffer: AudioBuffer) {
-  const {length, numberOfChannels, sampleRate} = buffer;
-  const context = new OfflineContext(numberOfChannels, length, sampleRate);
+  const { length, numberOfChannels, sampleRate } = buffer
+  const context = new OfflineContext(numberOfChannels, length, sampleRate)
 
   /**
    * Create buffer source
    */
 
-  const source = context.createBufferSource();
-  source.buffer = buffer;
+  const source = context.createBufferSource()
+  source.buffer = buffer
 
   /**
    * Create filter
    */
 
-  const filter = context.createBiquadFilter();
-  filter.type = 'lowpass';
+  const filter = context.createBiquadFilter()
+  filter.type = 'lowpass'
 
   /**
    * Pipe the song into the filter, and the filter into the offline context
    */
 
-  source.connect(filter);
-  filter.connect(context.destination);
+  source.connect(filter)
+  filter.connect(context.destination)
 
-  return source;
+  return source
 }
 
 /**
@@ -91,61 +92,61 @@ function getLowPassSource(buffer: AudioBuffer) {
  */
 
 function findPeaks(data: number[]): number[] {
-    let peaks: number[] = [];
-    let threshold = 0.9;
-    const minThresold = 0.3;
-    const minPeaks = 15;
+  let peaks: number[] = []
+  let threshold = 0.9
+  const minThresold = 0.3
+  const minPeaks = 15
 
-    /**
-     * Keep looking for peaks lowering the threshold until
-     * we have at least 15 peaks (10 seconds @ 90bpm)
-     */
+  /**
+   * Keep looking for peaks lowering the threshold until
+   * we have at least 15 peaks (10 seconds @ 90bpm)
+   */
 
-    while (peaks.length < minPeaks && threshold >= minThresold) {
-      peaks = findPeaksAtThreshold(data, threshold);
-      threshold -= 0.05;
-    }
+  while (peaks.length < minPeaks && threshold >= minThresold) {
+    peaks = findPeaksAtThreshold(data, threshold)
+    threshold -= 0.05
+  }
 
-    /**
-     * Too fiew samples are unreliable
-     */
+  /**
+   * Too fiew samples are unreliable
+   */
 
-    if (peaks.length < minPeaks) {
-      throw (
-        new Error('Could not find enough samples for a reliable detection.')
-      );
-    }
+  if (peaks.length < minPeaks) {
+    throw (
+      new Error('Could not find enough samples for a reliable detection.')
+    )
+  }
 
-    return peaks;
+  return peaks
 }
 
 /**
  * Function to identify peaks
  * @param  {Array}  data      Buffer channel data
- * @param  {Number} threshold Threshold for qualifying as a peak
+ * @param  {number} threshold Threshold for qualifying as a peak
  * @return {Array}            Peaks found that are grater than the threshold
  */
 
 function findPeaksAtThreshold(data: number[], threshold: number) {
-  const peaks = [];
+  const peaks = []
 
   /**
    * Identify peaks that pass the threshold, adding them to the collection
    */
 
-  for (var i = 0, l = data.length; i < l; i += 1) {
+  for (let i = 0, l = data.length; i < l; i += 1) {
     if (data[i] > threshold) {
-      peaks.push(i);
+      peaks.push(i)
 
       /**
        * Skip forward ~ 1/4s to get past this peak
        */
 
-      i += 10000;
+      i += 10000
     }
   }
 
-  return peaks;
+  return peaks
 }
 
 /**
@@ -155,21 +156,21 @@ function findPeaksAtThreshold(data: number[], threshold: number) {
  */
 
 function identifyIntervals(peaks: number[]) {
-  const intervals: any = [];
+  const intervals: any = []
 
   peaks.forEach((peak, index) => {
-    for (let i = 0; i < 10; i+= 1) {
-      let interval = peaks[index + i] - peak;
+    for (let i = 0; i < 10; i += 1) {
+      const interval = peaks[index + i] - peak
 
       /**
        * Try and find a matching interval and increase it's count
        */
 
-      let foundInterval = intervals.some((intervalCount: any) => {
+      const foundInterval = intervals.some((intervalCount: any) => {
         if (intervalCount.interval === interval) {
-          return intervalCount.count += 1;
+          return intervalCount.count += 1
         }
-      });
+      })
 
       /**
        * Add the interval to the collection if it's unique
@@ -177,24 +178,23 @@ function identifyIntervals(peaks: number[]) {
 
       if (!foundInterval) {
         intervals.push({
-          interval: interval,
-          count: 1
-        });
+          interval,
+          count: 1,
+        })
       }
     }
-  });
+  })
 
-  return intervals;
+  return intervals
 }
 
 /**
  * Factory for group reducer
- * @param  {Number} sampleRate Audio sample rate
+ * @param  {number} sampleRate Audio sample rate
  * @return {Function}
  */
 
 function groupByTempo(sampleRate: number): Function {
-
   /**
    * Figure out best possible tempo candidates
    * @param  {Array} intervalCounts List of identified intervals
@@ -202,7 +202,7 @@ function groupByTempo(sampleRate: number): Function {
    */
 
   return (intervalCounts: any) => {
-    const tempoCounts: any[] = [];
+    const tempoCounts: any[] = []
 
     intervalCounts.forEach((intervalCount: any) => {
       if (intervalCount.interval !== 0) {
@@ -210,30 +210,30 @@ function groupByTempo(sampleRate: number): Function {
          * Convert an interval to tempo
          */
 
-        let theoreticalTempo = (60 / (intervalCount.interval / sampleRate));
+        let theoreticalTempo = (60 / (intervalCount.interval / sampleRate))
 
         /**
          * Adjust the tempo to fit within the 90-180 BPM range
          */
 
-        while (theoreticalTempo < 90) theoreticalTempo *= 2;
-        while (theoreticalTempo > 180) theoreticalTempo /= 2;
+        while (theoreticalTempo < 90) theoreticalTempo *= 2
+        while (theoreticalTempo > 180) theoreticalTempo /= 2
 
         /**
          * Round to legible integer
          */
 
-        theoreticalTempo = Math.round(theoreticalTempo);
+        theoreticalTempo = Math.round(theoreticalTempo)
 
         /**
          * See if another interval resolved to the same tempo
          */
 
-        let foundTempo = tempoCounts.some(tempoCount => {
+        const foundTempo = tempoCounts.some((tempoCount) => {
           if (tempoCount.tempo === theoreticalTempo) {
-            return tempoCount.count += intervalCount.count;
+            return tempoCount.count += intervalCount.count
           }
-        });
+        })
 
         /**
          * Add a unique tempo to the collection
@@ -242,12 +242,12 @@ function groupByTempo(sampleRate: number): Function {
         if (!foundTempo) {
           tempoCounts.push({
             tempo: theoreticalTempo,
-            count: intervalCount.count
-          });
+            count: intervalCount.count,
+          })
         }
       }
-    });
+    })
 
-    return tempoCounts;
+    return tempoCounts
   }
 }

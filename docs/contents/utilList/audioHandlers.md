@@ -17,9 +17,9 @@ This function only works in browser.
 
 ```ts twoslash
 // @noErrors
-import { detectBPM } from "@vincent-the-gamer/utils/client"
+import { detectBPM } from '@vincent-the-gamer/utils/client'
 
-const audioBuffer: AudioBuffer  // please convert you audio into AudioBuffer
+const audioBuffer: AudioBuffer // please convert you audio into AudioBuffer
 const bpm = (detectBPM(audioBuffer) as any) * 1
 console.log(bpm) // 120  (for example)
 ```
@@ -31,7 +31,7 @@ This function only works in Node.js.
 :::
 
 - description: `Transform .ncm audios into .mp3 audios.`
-- inputs: 
+- inputs:
     - `ncm directory`
     - `mp3 output directory`
     - `songcover output directory`
@@ -39,16 +39,15 @@ This function only works in Node.js.
     - `mp3 files`
     - `song covers`
 
-
 ```ts twoslash
 // @noErrors
-import { ncm2mp3 } from "@vincent-the-gamer/utils/server"
+import { ncm2mp3 } from '@vincent-the-gamer/utils/server'
 
 // just look if mp3 files have been generated.
 await ncm2mp3(
-    "ncm", 
-    "mp3", 
-    "songcover"
+  'ncm',
+  'mp3',
+  'songcover'
 )
 ```
 

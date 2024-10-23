@@ -7,13 +7,13 @@ lastUpdated: true
 
 ## env
 - description: `get current runtime`
-- returns: 
+- returns:
     - `node`: You are in **Node.js** environment.
     - `browser`: You are in **browser** environment.
 
 ```ts twoslash
 // @noErrors
-import { env } from "@vincent-the-gamer/utils"
+import { env } from '@vincent-the-gamer/utils'
 
 console.log(env) // "node" | "browser"
 ```
@@ -24,7 +24,7 @@ console.log(env) // "node" | "browser"
 
 ```ts twoslash
 // @noErrors
-import { getCurrentPlatform } from "@vincent-the-gamer/utils"
+import { getCurrentPlatform } from '@vincent-the-gamer/utils'
 
 console.log(getCurrentPlatform()) // "windows" | "macOS" | "linux" | "mobile"
 ```

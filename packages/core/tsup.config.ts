@@ -2,14 +2,14 @@ import type { Options } from 'tsup'
 
 export default <Options>{
   entryPoints: [
-    "src/index.ts",
-    "src/client/index.ts",
-    "src/server/index.ts"
+    'src/index.ts',
+    'src/client/index.ts',
+    'src/server/index.ts',
   ],
   clean: true,
-  format: ['esm',"cjs"],
+  format: ['esm', 'cjs'],
   dts: true,
   minify: true,
   // compatible with __dirname in cjs and import.meta.url in mjs.
-  shims: true
+  shims: true,
 }

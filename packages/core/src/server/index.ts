@@ -1,1 +1,1 @@
-export * from "./ncm-to-mp3"
+export * from './ncm-to-mp3'

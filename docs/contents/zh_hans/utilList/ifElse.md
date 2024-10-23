@@ -12,11 +12,11 @@ lastUpdated: true
 
 ```ts twoslash
 // @noErrors
-import { useIf } from "@vincent-the-gamer/utils"
+import { useIf } from '@vincent-the-gamer/utils'
 
 const result = useIf([
-    [2 > 1, () => "yeah, 2 > 1"], // 函数会被调用，结果为函数的返回值
-    [2 === 1, () => "yeah, 2 === 1"], // 函数不会被调用，结果直接给null
+  [2 > 1, () => 'yeah, 2 > 1'], // 函数会被调用，结果为函数的返回值
+  [2 === 1, () => 'yeah, 2 === 1'], // 函数不会被调用，结果直接给null
 ])
 
 // result 值为 ["yeah, 2 > 1", null]
@@ -28,14 +28,14 @@ const result = useIf([
 
 ```ts twoslash
 // @noErrors
-import { useIfElse, _ } from "@vincent-the-gamer/utils"
+import { _, useIfElse } from '@vincent-the-gamer/utils'
 
 const result = useIfElse([
-    [2 < 1, () => "aaa"], // 不满足条件，继续
-    // @ts-expect-error
-    [2 === 1, () => "bbb"], // 不满足条件，继续
-    [2 > 1, () => "ccc"], // 满足条件，调用函数
-    [_, () => "not reached"] // 没有匹配任何条件，调用兜底的函数
+  [2 < 1, () => 'aaa'], // 不满足条件，继续
+  // @ts-expect-error
+  [2 === 1, () => 'bbb'], // 不满足条件，继续
+  [2 > 1, () => 'ccc'], // 满足条件，调用函数
+  [_, () => 'not reached'] // 没有匹配任何条件，调用兜底的函数
 ])
 
 // result 值为 "ccc"

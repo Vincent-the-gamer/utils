@@ -1,10 +1,10 @@
-import { test, expect } from "vitest"
-import { env, getCurrentPlatform } from "../src/env"
+import { expect, it } from 'vitest'
+import { env, getCurrentPlatform } from '../src/env'
 
-test("env", () => {
-    expect(env).toBe("node")
+it('env', () => {
+  expect(env).toBe('node')
 })
 
-test("Get current platform.", () => {
-    expect(getCurrentPlatform()).toEqual("macOS")
+it('get current platform.', () => {
+  expect(getCurrentPlatform()).toEqual('macOS')
 })

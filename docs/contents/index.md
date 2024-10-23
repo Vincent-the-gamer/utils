@@ -6,7 +6,7 @@ hero:
   name: "Utils"
   text: "An opinionated JS/TS util collection."
   tagline: "@vincent-the-gamer/utils"
-  image: 
+  image:
     src: "/logo/logo.png"
     alt: logo
   actions:
@@ -17,6 +17,6 @@ hero:
 features:
   - title: 100% TypeScript
     details: Source code is written in pure TypeScript.
-    icon: 
+    icon:
       src: "/imgs/typescript.png"
 ---

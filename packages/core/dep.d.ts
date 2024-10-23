@@ -1,1 +1,1 @@
-declare module "aes-js"
+declare module 'aes-js'

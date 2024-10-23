@@ -8,13 +8,13 @@ lastUpdated: true
 
 ## env
 - 描述: `获取当前运行时环境。`
-- 返回值: 
+- 返回值:
     - `node`: 你在 **Node.js** 环境中.
     - `browser`: 你在 **浏览器** 环境中.
 
 ```ts twoslash
 // @noErrors
-import { env } from "@vincent-the-gamer/utils"
+import { env } from '@vincent-the-gamer/utils'
 
 console.log(env) // "node" | "browser"
 ```
@@ -25,7 +25,7 @@ console.log(env) // "node" | "browser"
 
 ```ts twoslash
 // @noErrors
-import { getCurrentPlatform } from "@vincent-the-gamer/utils"
+import { getCurrentPlatform } from '@vincent-the-gamer/utils'
 
 console.log(getCurrentPlatform()) // "windows" | "macOS" | "linux" | "mobile"
 ```

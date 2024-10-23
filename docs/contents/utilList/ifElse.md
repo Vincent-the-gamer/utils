@@ -12,11 +12,11 @@ lastUpdated: true
 
 ```ts twoslash
 // @noErrors
-import { useIf } from "@vincent-the-gamer/utils"
+import { useIf } from '@vincent-the-gamer/utils'
 
 const result = useIf([
-    [2 > 1, () => "yeah, 2 > 1"], // handler will be called
-    [2 === 1, () => "yeah, 2 === 1"], // handler will not be called
+  [2 > 1, () => 'yeah, 2 > 1'], // handler will be called
+  [2 === 1, () => 'yeah, 2 === 1'], // handler will not be called
 ])
 
 // result is ["yeah, 2 > 1", null]
@@ -28,14 +28,14 @@ const result = useIf([
 
 ```ts twoslash
 // @noErrors
-import { useIfElse, _ } from "@vincent-the-gamer/utils"
+import { _, useIfElse } from '@vincent-the-gamer/utils'
 
 const result = useIfElse([
-    [2 < 1, () => "aaa"], // continue
-    // @ts-expect-error
-    [2 === 1, () => "bbb"], // continue
-    [2 > 1, () => "ccc"], // true, call the func
-    [_, () => "not reached"] // else（fallback)
+  [2 < 1, () => 'aaa'], // continue
+  // @ts-expect-error
+  [2 === 1, () => 'bbb'], // continue
+  [2 > 1, () => 'ccc'], // true, call the func
+  [_, () => 'not reached'] // else（fallback)
 ])
 
 // result is: "ccc"

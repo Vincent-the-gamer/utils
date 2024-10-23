@@ -6,7 +6,7 @@ hero:
   name: "Utils"
   text: "有个性的 JS/TS 工具集合"
   tagline: "@vincent-the-gamer/utils"
-  image: 
+  image:
     src: "/logo/logo.png"
     alt: logo
   actions:
@@ -17,6 +17,6 @@ hero:
 features:
   - title: 100% TypeScript
     details: 源代码由纯TypeScript实现。
-    icon: 
+    icon:
       src: "/imgs/typescript.png"
 ---

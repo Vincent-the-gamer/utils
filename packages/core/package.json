@@ -1,31 +1,40 @@
 {
   "name": "@vincent-the-gamer/utils",
   "type": "module",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Opinionated utils of JS/TS by @Vincent-the-gamer",
   "author": "Vincent-the-gamer <erxianqiaottjt@163.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Vincent-the-gamer/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent-the-gamer/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vincent-the-gamer/utils/issues"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./client": {
+      "import": "./dist/client/index.js",
+      "require": "./dist/client/index.cjs"
+    },
+    "./server": {
+      "import": "./dist/server/index.js",
+      "require": "./dist/server/index.cjs"
+    }
+  },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "*.d.ts"
-  ],
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./client": {
-      "require": "./dist/client/index.cjs",
-      "import": "./dist/client/index.js"
-    },
-    "./server": {
-      "require": "./dist/server/index.cjs",
-      "import": "./dist/server/index.js"
-    }
-  },
   "typesVersions": {
     "*": {
       ".": [
@@ -39,35 +48,25 @@
       ]
     }
   },
-  "license": "MIT",
-  "funding": "https://afdian.net/a/vince-g",
-  "homepage": "https://github.com/Vincent-the-gamer/utils#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vincent-the-gamer/utils.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Vincent-the-gamer/utils/issues"
-  },
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.com",
     "access": "public"
   },
-  "sideEffects": false,
   "scripts": {
     "dev": "esno",
     "build": "tsup"
   },
-  "keywords": [
-    "utils"
-  ],
-  "devDependencies": {
-    "@types/node": "^20.14.10",
-    "esno": "^4.7.0",
-    "typescript": "^5.5.3"
-  },
   "dependencies": {
-    "aes-js": "^3.1.2",
-    "tsup": "^8.1.0"
+    "aes-js": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.15",
+    "esno": "^4.8.0",
+    "typescript": "^5.6.3",
+    "tsup": "^8.3.0"
   }
 }
