@@ -1,3 +1,6 @@
+# v0.2.0
+- Add Python-like functions.
+
 # v0.1.9
 - Add Bilibili BV <-> AV number transformers.
 
